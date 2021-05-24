@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background: #f2f2f2;
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+}
+
+.box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border: black 2px solid;
+  margin: auto;
+  background-image: url("./images/campazzo-4-300x300.jpg");
+}
+
+.play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  color: #f2f2f2;
+}
+
+.flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.452);
+}
+
+.contenido-modal {
+  position: relative;
+  margin: auto;
+  width: auto;
+  animation-name: modal;
+  animation-duration: 1s;
+}
+
+iframe {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 300px;
+}
+@keyframes modal {
+  from {
+    top: -330px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.close {
+  align-self: flex-end;
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.close:hover {
+  color: #7f8c8d;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+}
+
+h3 {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  margin-top: 420px;
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: center;
+}
+
+p {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  margin-top: 680px;
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-left: 20px;
+    border-top: 2px rgb(65, 65, 65) solid;
+  }
+  .contenido-modal {
+    width: 100%;
+    height: 400px;
+  }
+
+  .box {
+    margin: 0;
+  }
+
+  .play {
+    display: flex;
+    margin: auto;
+    align-items: center;
+  }
+
+  h3 {
+    text-align: left;
+    position: absolute;
+    right: -10px;
+    top: -360px;
+    display: flex;
+    max-width: 70%;
+    font-size: x-large;
+  }
+  p {
+    text-align: left;
+    position: absolute;
+    right: -10px;
+    top: -520px;
+    display: flex;
+    width: 70%;
+  }
+}
